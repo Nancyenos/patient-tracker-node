@@ -19,3 +19,7 @@ mongoose
     app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
   })
   .catch((err) => console.error(err));
+
+const patientRoutes = require("./routes/patientRoutes");
+app.use("/api/patients", patientRoutes);
+
